@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>PTA Bingo</title>
+  <meta name="description" content="">
+  <meta name="author" content="@tomroyal">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/bingo.css">
+
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script src="./bingo.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" id="bigtop">
+        <p id="bignumber"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns"">
+        <p id="ballssofar">&nbsp;</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns"">
+        <div id="welcome">
+          <h1>PTA Bingo</h1>
+          <p>Welcome! Click below to start a new round, then press any key to draw a new number.</p>
+          <p>Reload the browser tab to reset the game and start a new round.</p>
+          <p>If you found this useful, please <a href="https://cooperslanepta.co.uk/donate5/" target="_blank">donate a few quid</a> - thanks!</p>
+        </div>
+        <div id="startgame"><p class="button">Start Round</p></div>
+        <div id="callball"><p class="button">Next Ball</p></div>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
