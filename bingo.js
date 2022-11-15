@@ -20,7 +20,6 @@ function startNewGame(){
         i++
     }
     $('#bignumber').html("GO!");
-    console.log(gameBalls);
 }
 
 function callBall(){
@@ -50,6 +49,7 @@ function callBall(){
     }
 
     if (ballsLeft == 1){
+        $('#ballssofar').append('<br>Out of balls! Press R to reset.');
         endGame();
     }
 }
@@ -65,6 +65,12 @@ function endGame(){
     $( "#callball" ).hide();
 }
 
+function resetGame(){
+    $( "#callball" ).show();  
+    $('#ballssofar').empty();        
+    startNewGame();
+}
+
 $( document ).ready(function() {
     $( "#callball" ).hide();
     
@@ -78,10 +84,17 @@ $( document ).ready(function() {
         }
     });
 
-    $(document).keypress(function() {
-        if (inGame){
-            callBall();
+    $(document).keypress(function(e) {
+        console.log(e.keyCode);
+        if (e.keyCode == 114){
+            resetGame();
         }
+        else if (e.keyCode == 98){ 
+            if (inGame){
+                callBall();
+            }
+        }
+        
     })   
 
     $( "#callball" ).on( "click", function() {
